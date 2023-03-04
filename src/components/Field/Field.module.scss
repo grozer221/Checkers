@@ -1,0 +1,38 @@
+.field {
+    display: inline-block;
+    border: 2px solid black;
+}
+
+.row {
+    display: flex;
+
+
+
+    .cell {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cell.selected {
+        background-color: green !important;
+    }
+
+    .cell.availableMove {
+        background-color: greenyellow !important;
+    }
+
+    &.even {
+        .cell:nth-child(even) {
+            background-color: gray;
+        }
+    }
+
+    &.odd {
+        .cell:nth-child(odd) {
+            background-color: gray;
+        }
+    }
+}
